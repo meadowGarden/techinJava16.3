@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws NoMoreMaltException {
 
         BeerFactoryImpl factory = new BeerFactoryImpl();
-        DefaultBeerBottle beerBottle01 = factory.produceNextBeerBottle();
+        BeerBottle beerBottle01 = factory.produceNextBeerBottle();
         System.out.printf("volume in liters -> %.2f%n", beerBottle01.getVolumeInLiters());
         System.out.printf("alcohol content -> %.2f%n", beerBottle01.getAlcoholContentInPercent());
         System.out.println("-------");

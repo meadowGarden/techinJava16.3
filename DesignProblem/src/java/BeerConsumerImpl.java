@@ -18,8 +18,10 @@ public class BeerConsumerImpl extends BeerConsumer {
 
     @Override
     public BeerBottle showBeerBottleToAStranger(BeerBottle beerBottle, boolean mightBeAPoliceMan) {
+
+
         if (mightBeAPoliceMan) {
-            return new UnalcoholicBeverage(beerBottle.getVolumeInLiters(), 0);
+            return new BottleWrapper((DefaultBeerBottle) beerBottle);
         }
         return beerBottle;
     }
